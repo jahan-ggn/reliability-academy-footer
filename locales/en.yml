@@ -1,0 +1,6 @@
+en:
+  theme_metadata:
+    description: A Discourse theme component that replicates the Reliability Academy
+      Directus footer
+    settings:
+      example_setting: A description of a setting.
