@@ -1,15 +1,12 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
+import { action } from "@ember/object";
+import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import { trustHTML } from "@ember/template";
 import { eq } from "discourse/truth-helpers";
 
 export default class ReliabilityFooter extends Component {
   @tracked _socialIcons = {};
-
-  constructor() {
-    super(...arguments);
-    this._loadSocialIcons();
-  }
 
   get navLinks() {
     return (settings.nav_links || []).map((link) => ({
@@ -30,7 +27,7 @@ export default class ReliabilityFooter extends Component {
 
   get footerStyle() {
     if (this.hasBackgroundImage) {
-      return `background-image: url("${settings.background_image}")`;
+      return trustHTML(`background-image: url("${settings.background_image}")`);
     }
     return null;
   }
@@ -39,6 +36,7 @@ export default class ReliabilityFooter extends Component {
     return `mailto:${settings.contact_email}`;
   }
 
+  @action
   async _loadSocialIcons() {
     const links = settings.social_links || [];
     const results = {};
@@ -63,6 +61,7 @@ export default class ReliabilityFooter extends Component {
       <footer
         class="ra-footer {{if this.hasBackgroundImage 'ra-footer--has-bg'}}"
         style={{this.footerStyle}}
+        {{didInsert this._loadSocialIcons}}
       >
         <div class="ra-footer__container">
           <div class="ra-footer__left">
