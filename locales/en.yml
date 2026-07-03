@@ -1,6 +1,18 @@
 en:
   theme_metadata:
-    description: A Discourse theme component that replicates the Reliability Academy
+    description:
+      A Discourse theme component that replicates the Reliability Academy
       Directus footer
     settings:
-      example_setting: A description of a setting.
+      logo: "Logo image displayed in the footer"
+      logo_link: "URL the logo links to"
+      background_image: "Background image for the footer"
+      nav_links: "Navigation links displayed in the footer"
+      nav_links_text: "Link text"
+      nav_links_url: "Link URL"
+      copyright_text: "Copyright text displayed in the footer"
+      social_links: "Social media links with custom icons"
+    social_links_url: "Social media URL"
+    social_links_target: "Link target"
+    social_links_icon: "Icon image for the social link"
+    contact_email: "Contact email displayed in the footer"

@@ -1,0 +1,141 @@
+.ra-footer,
+.ra-footer * {
+  box-sizing: border-box;
+}
+
+.ra-footer {
+  width: 100%;
+  font-family: "Open Sans", "Open Sans Fallback", sans-serif;
+  background-color: var(--primary);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--secondary);
+  padding: 2rem 0.5rem;
+
+  @media (width >= 768px) {
+    padding: 2rem 1rem;
+  }
+}
+
+.ra-footer--has-bg {
+  background-color: transparent;
+}
+
+.ra-footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (width <= 1023px) {
+    gap: 1.5rem;
+  }
+
+  @media (width >= 1024px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.ra-footer__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.ra-footer__logo-link {
+  width: 4rem;
+  display: inline-block;
+}
+
+.ra-footer__logo {
+  width: 100%;
+  height: auto;
+}
+
+.ra-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.ra-footer__nav-link {
+  color: var(--secondary);
+  font-weight: 400;
+
+  &:hover {
+    color: var(--secondary);
+  }
+}
+
+.ra-footer__copyright {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.ra-footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
+
+  @media (width >= 1024px) {
+    align-items: flex-end;
+    margin-top: 4rem;
+  }
+}
+
+.ra-footer__social {
+  display: flex;
+  column-gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ra-footer__social-link {
+  display: inline-flex;
+  padding: 0.25rem;
+  color: var(--secondary);
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--secondary);
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.ra-footer__contact {
+  color: var(--secondary);
+  margin: 0;
+  font-size: 0.875rem;
+
+  a {
+    color: var(--secondary);
+  }
+}
+
+.experimental-screen__bottom-left,
+.experimental-screen__bottom-right,
+.experimental-screen__bottom-top,
+.experimental-screen__bottom-bottom,
+.experimental-screen__bottom-bar {
+  display: none;
+}
+
+#main-outlet {
+  min-height: 85vh;
+}

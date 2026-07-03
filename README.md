@@ -2,4 +2,4 @@
 
 **Theme Summary**
 
-For more information, please see: **url to meta topic**
+A Discourse theme component that replicates the Reliability Academy Directus footer

@@ -1,2 +1,64 @@
-example_setting:
-  default: true
+logo:
+  type: upload
+  default: ""
+
+logo_link:
+  default: ""
+
+background_image:
+  type: upload
+  default: ""
+
+nav_links:
+  type: objects
+  default: []
+  schema:
+    name: nav_link
+    identifier: text
+    properties:
+      text:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 100
+      url:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 2048
+
+copyright_text:
+  default: ""
+
+social_links:
+  type: objects
+  default: []
+  schema:
+    name: social_link
+    identifier: text
+    properties:
+      text:
+        type: string
+        validations:
+          min_length: 1
+          max_length: 100
+      url:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 2048
+      target:
+        type: enum
+        default: _blank
+        choices:
+          - _blank
+          - _self
+      icon:
+        type: upload
+        required: true
+
+contact_email:
+  default: ""
