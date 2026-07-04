@@ -1,6 +1,8 @@
 import Component from "@glimmer/component";
 // eslint-disable-next-line discourse/deprecated-imports
 import { htmlSafe } from "@ember/template";
+// eslint-disable-next-line discourse/deprecated-imports
+import concatClass from "discourse/helpers/concat-class";
 import { eq } from "discourse/truth-helpers";
 
 export default class ReliabilityFooter extends Component {
@@ -30,7 +32,10 @@ export default class ReliabilityFooter extends Component {
   <template>
     {{#if @showFooter}}
       <footer
-        class="ra-footer {{if this.hasBackgroundImage 'ra-footer--has-bg'}}"
+        class={{concatClass
+          "ra-footer"
+          (if this.hasBackgroundImage "--has-bg")
+        }}
         style={{this.footerStyle}}
       >
         <div class="ra-footer__container">

@@ -1,3 +1,8 @@
+.ra-footer,
+.ra-footer * {
+  box-sizing: border-box;
+}
+
 .ra-footer {
   width: 100%;
   border-radius: 0;
@@ -9,10 +14,6 @@
   color: var(--secondary);
   padding: 2rem 0.5rem;
 
-  &.--has-bg {
-    background-color: transparent;
-  }
-
   @media (width >= 768px) {
     padding: 2rem 1rem;
   }
@@ -20,11 +21,15 @@
   @media (width >= 1280px) {
     padding: 2rem 0;
   }
+
+  &.--has-bg {
+    background-color: transparent;
+  }
 }
 
 .ra-footer__container {
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -62,7 +67,7 @@
   column-gap: 2.5rem;
   row-gap: 1.5rem;
   list-style: none;
-  margin-block: 1.25rem 0;
+  margin: 1.25rem 0;
   padding: 0;
   font-size: 1rem;
 }
@@ -90,7 +95,7 @@
 
   @media (width >= 1024px) {
     align-items: flex-end;
-    margin-block-start: 4rem;
+    margin-top: 4rem;
   }
 }
 
@@ -110,6 +115,11 @@
 
   &:hover {
     color: var(--secondary);
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
