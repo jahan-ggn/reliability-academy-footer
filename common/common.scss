@@ -3,7 +3,6 @@
 .ra-footer {
   --footer-text-color: light-dark(var(--secondary), var(--primary));
   --social-icon-size: 1.5rem;
-
   width: 100%;
   font-family: "Open Sans", "Open Sans Fallback", sans-serif;
   background-color: var(--primary);
@@ -134,6 +133,19 @@
   width: var(--social-icon-size);
   height: var(--social-icon-size);
   filter: brightness(0) invert(1);
+}
+
+.ra-footer__nav-link,
+.ra-footer__social-link {
+  color: var(--footer-text-color);
+
+  &:visited {
+    color: var(--footer-text-color);
+  }
+
+  &:hover {
+    color: var(--footer-text-color);
+  }
 }
 
 [class^="experimental-screen__"] {
