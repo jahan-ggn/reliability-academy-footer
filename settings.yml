@@ -28,6 +28,12 @@ nav_links:
         validations:
           min_length: 1
           max_length: 2048
+      target:
+        type: enum
+        default: _blank
+        choices:
+          - _blank
+          - _self
 
 copyright_text:
   default: ""

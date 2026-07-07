@@ -57,6 +57,8 @@ export default class ReliabilityFooter extends Component {
                   <li class="ra-footer__nav-item">
                     <a
                       href={{link.url}}
+                      target={{link.target}}
+                      rel={{if (eq link.target "_blank") "noopener noreferrer"}}
                       class="ra-footer__nav-link"
                     >{{link.text}}</a>
                   </li>
